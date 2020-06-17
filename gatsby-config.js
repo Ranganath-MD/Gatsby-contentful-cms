@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Contentful Gatsby`,
+    description: `Conents from  Contentful CMS`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `starter`,
+        short_name: `gatsby-contentful`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -27,8 +27,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `y3lsn88xhkkr`,
+        accessToken: `kJ7Z-0bUI7G-ERfMvOvKRnTbQW83eRRWivE5KzVklUc`,
+        downloadLocal: true,
+      },
+    },
   ],
 }

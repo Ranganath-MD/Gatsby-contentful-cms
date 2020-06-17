@@ -1,21 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
+import { motion } from "framer-motion"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <SEO title="Contentful" />
+    <div >
+      <motion.div
+        className="container"
+        animate={{ y: 100,}}
+        transition={{ ease: "easeOut", duration: 1.5 }}
+      >
+        <h1>Source content from Conentful</h1>
+        <p>It’s the modern way to manage content: Control all content from a single hub. Publish to any channel. Integrate hundreds of tools with our industry-leading app framework.</p>
+      </motion.div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
