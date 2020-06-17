@@ -9,6 +9,7 @@ Source Data from contentful CMS into your Gatsby site using gatsby-source-conten
 
 ## Demo 
 
+https://gatsby-contentful-me.netlify.app/
 
 <img alt="Gatsby" src="./src/images/screenshot.png" width="600" />
 
